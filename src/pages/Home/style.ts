@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Home = styled.section`
 	${({ theme }) => css`
@@ -19,35 +19,56 @@ export const HomeContent = styled.main`
 	`}
 `;
 
-export const HomeHeaderDetails = styled.div`
-	${() => css`
-		display: flex;
-		justify-content: space-between;
-        padding: 10px 20px;
+export const HomeNavBar = styled.nav`
+    
+`;
+
+export const TitleContainer = styled.div`
+  /* Estilos para o container do título */
+`;
+
+export const HomeNavbarTitle = styled.h1`
+  ${({ theme }) => css`
+    color: ${theme.colors.textColor};
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 20px;
+  `}
+`;
+
+export const TitleText = styled.span`
+  /* Estilos para o texto do título */
+`;
+
+export const ContainerFluid = styled.div`
+    ${() => css `
+		max-width: 80rem;
 	`}
 `;
 
-export const HomeHeaderDetailsLogo = styled.h1`
+export const ContainerNavbar = styled.div`
+    
+`;
+
+export const HomeUlNavbar = styled.ul`
+    
+`;
+
+export const HomeLiNavbar = styled.li`
+    
+`;
+
+export const HomeTagANavbar = styled.a`
 	${({ theme }) => css`
-		${theme.mixins.logoStyle};
-		text-transform: uppercase;
-		margin: 0;
-        font-size:
-	`}
-`;
+		display:block;
+		color: ${theme.colors.textColor};
+		padding: 0.5rem;
+		margin: 0rem 2rem;
+		text-decoration: none;
+		font-size: 16px;
 
-export const HomeHeaderDetailsDate = styled.p`
-	${() => css`
-		text-transform: capitalize;
-	`}
-`;
-
-export const HomeHeaderNavBar = styled.div`
-	${({ theme }) => css`
-		display: flex;
-        justify-content: space-between;
-		gap: 10px;
-        margin: 0px 20px
-	
+		&:hover {
+			color: ${theme.colors.hoverColor};
+		}
 	`}
 `;

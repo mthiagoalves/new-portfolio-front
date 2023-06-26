@@ -4,7 +4,7 @@ export const colors = {
     primaryColorOpacity: 'rgba(108, 234, 105, 0.4)',
     shadowColor: '#6CEA69',
 
-    bgColor: 'linear-gradient(to right, #30383f 0%, #596164 100%)',
+    bgColor: 'linear-gradient(to right, #181a1b 0%, #37393a 100%)',
 
     btnDarkGreen: 'linear-gradient(to right, #136a8a 0%, #267871  51%, #136a8a  100%)',
     btnLight: 'linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%)',
@@ -17,4 +17,5 @@ export const colors = {
     textLight: "#ABBBC2",
     textNeutral: "#889898",
     textDark: "#3B5162",
+    hoverColor: "#177f3f"
 }
