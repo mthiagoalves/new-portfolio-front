@@ -23,8 +23,13 @@ export const HomeNavBar = styled.nav`
     
 `;
 
-export const TitleContainer = styled.div`
-  /* Estilos para o container do título */
+const StyledHomeNavbarTitle = styled.h1`
+  ${({ theme }) => css`
+    color: ${theme.colors.textColor};
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 20px;
+  `}
 `;
 
 export const HomeNavbarTitle = styled.h1`
@@ -34,10 +39,6 @@ export const HomeNavbarTitle = styled.h1`
     margin: 0;
     font-size: 20px;
   `}
-`;
-
-export const TitleText = styled.span`
-  /* Estilos para o texto do título */
 `;
 
 export const ContainerFluid = styled.div`

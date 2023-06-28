@@ -9,7 +9,9 @@ const Home = () => {
         <header>
           <S.HomeNavBar className="navbar navbar-expand-lg">
             <S.ContainerFluid className="container-fluid">
-              <S.HomeNavbarTitle />
+              <S.HomeNavbarTitle>
+                My New Portfolio
+              </S.HomeNavbarTitle>
               <S.ContainerNavbar className="collapse navbar-collapse justify-content-end">
                 <S.HomeUlNavbar className="navbar-nav">
                   <S.HomeLiNavbar className="nav-item">
