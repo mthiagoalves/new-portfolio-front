@@ -1,5 +1,6 @@
 import * as S from './style';
 import Navbar from 'components/Navbar';
+import About from 'components/About';
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
         <header>
           <Navbar/>
         </header>
+        <About/>
       </S.HomeContent>
     </S.Home>
   );

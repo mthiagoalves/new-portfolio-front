@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { Theme } from 'types/styled-components';
 
 export const HomeNavBar = styled.nav`
     

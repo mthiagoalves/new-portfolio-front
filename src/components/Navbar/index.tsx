@@ -1,9 +1,10 @@
 import * as S from './style';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 const Navbar = () => {
     return (
         <S.HomeNavBar className="navbar navbar-expand-lg">
-            <S.ContainerFluid className="container-fluid">
                 <S.HomeNavbarTitle>
                     My New Portfolio
                 </S.HomeNavbarTitle>
@@ -23,7 +24,6 @@ const Navbar = () => {
                         </S.HomeLiNavbar>
                     </S.HomeUlNavbar>
                 </S.ContainerNavbar>
-            </S.ContainerFluid>
         </S.HomeNavBar>
     );
 }

@@ -14,8 +14,10 @@ export const Home = styled.section`
 export const HomeContent = styled.main`
 	${() => css`
 		width: 100%;
+		max-width: 80rem;
 		overflow: hidden;
 		box-sizing: border-box;
+		margin: 0 auto;
 	`}
 `;
 
