@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const HomeNavBar = styled.nav`
 	${() => css`
     width:100%;
-	position:absolute;
+	position:fixed;
 	z-index: 10;
 	`}
 `;
@@ -38,7 +38,7 @@ export const HomeTagANavbar = styled.a`
 		padding: 0.5rem;
 		margin: 0rem 1rem;
 		text-decoration: none;
-		font-size: 1rem;
+		font-size: 1.05rem;
 
 		&:hover {
 			color: ${theme.colors.hoverColor};
