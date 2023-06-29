@@ -8,7 +8,7 @@ export const constants = {
     headingLineHeight: '140%',
 
     bodyFontFamily: 'Poppins',
-    bodyTextFontSize: '0.875rem',
+    bodyTextFontSize: '1.2rem',
     bodyTitleFontSize: '1.8rem',
     bodyLineHeight: '140%',
 }
