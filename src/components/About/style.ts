@@ -20,6 +20,11 @@ export const LogoText = styled.h5`
         background: ${theme.colors.bgColorGreen};
         color: ${theme.colors.bgColorWhite};
         padding: 0 0.313rem;
+
+        @media(max-width: 767px){
+            left: 1.5rem;
+            
+        }
     `}
 `;
 
@@ -33,7 +38,9 @@ export const ContentBx = styled.div`
         flex-direction: column;
         justify-content: center;
         padding: 6.25rem;
-        
+        @media(max-width: 767px){
+            padding: 1.5rem;
+        }
     `}
 `;
 

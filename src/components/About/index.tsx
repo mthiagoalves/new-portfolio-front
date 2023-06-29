@@ -12,7 +12,7 @@ const About = () => {
                 <S.LogoText>
                     Portfolio 2.0
                 </S.LogoText>
-                <S.ContentBx className="col-7 pt-5">
+                <S.ContentBx className="col-12 col-sm-7 pt-5">
                     <S.TitleH4>Hi, my name is</S.TitleH4>
                     <S.TitleH2>Thiago Alves,</S.TitleH2>
                     <S.TitleH4> i'm Fullstack Web Developer</S.TitleH4>
