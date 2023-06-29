@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <S.Home>
       <S.HomeContent>
-        <header>
+        <header className='d-sm-block d-none'>
           <Navbar />
         </header>
         <About />
