@@ -27,7 +27,7 @@ export const ContentBx = styled.div`
     ${() => css`
         height: 100%;
         position: absolute;
-        top: 0;
+        top: 1.875rem;
         left: 0;
         display: flex;
         flex-direction: column;
@@ -109,5 +109,7 @@ export const BtnDownloadCV = styled.a`
         text-align: center;
     `}
 `;
+
+
 
 
