@@ -8,6 +8,23 @@ export const FirstSection = styled.div`
 	`}
 `;
 
+export const ContentBx = styled.div`
+    ${() => css`
+        height: 100%;
+        position: absolute;
+        top: 1.875rem;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 6.25rem;
+        @media(max-width: 767px){
+            padding: 1.5rem;
+            top: 0;
+        }
+    `}
+`;
+
 export const LogoText = styled.h5`
     ${({theme}) => css`
         position: absolute;
@@ -28,23 +45,7 @@ export const LogoText = styled.h5`
     `}
 `;
 
-export const ContentBx = styled.div`
-    ${() => css`
-        height: 100%;
-        position: absolute;
-        top: 1.875rem;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 6.25rem;
-        @media(max-width: 767px){
-            padding: 1.5rem;
-        }
-    `}
-`;
-
-export const TitleH5 = styled.h4`
+export const TitleH5 = styled.h5`
     ${({theme}) => css ` 
         position: absolute;
         top: 2.5rem;
@@ -80,6 +81,9 @@ export const TextP = styled.p`
         margin: 0.188rem 0;
         color: ${theme.colors.textColorWhite};
         font-weight: 300;
+        @media(max-width: 767px){ 
+            margin-top: 2rem;
+        }
 	`}
 `;
 
@@ -114,6 +118,9 @@ export const BtnDownloadCV = styled.a`
         font-weight: 500;
         letter-spacing: 0.125rem;
         text-align: center;
+        @media(max-width: 767px){ 
+            margin-top: 3rem;
+        }
     `}
 `;
 
