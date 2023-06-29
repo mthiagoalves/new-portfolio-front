@@ -4,7 +4,7 @@ import { constants } from "./constants";
 
 const bodyStyle = () => css`
   font-family: ${constants.bodyFontFamily};
-  font-size: ${constants.bodyFontSize};
+  font-size: ${constants.bodyTextFontSize};
   line-height: ${constants.bodyLineHeight};
 `;
 

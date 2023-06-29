@@ -1,5 +1,5 @@
 export const constants = {
-    logoFontFamily: 'Big Shoulders Inline Display',
+    logoFontFamily: 'Poppins',
     logoFontSize: '1.8rem',
     logoLineHeight: '140%',
 
@@ -7,7 +7,8 @@ export const constants = {
     headingFontSize: '1.75rem',
     headingLineHeight: '140%',
 
-    bodyFontFamily: 'Barlow',
-    bodyFontSize: '0.875rem',
+    bodyFontFamily: 'Poppins',
+    bodyTextFontSize: '0.875rem',
+    bodyTitleFontSize: '1.8rem',
     bodyLineHeight: '140%',
 }

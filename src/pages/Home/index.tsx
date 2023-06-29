@@ -1,15 +1,17 @@
 import * as S from './style';
 import Navbar from 'components/Navbar';
 import About from 'components/About';
+import Objectives from 'components/Objectives';
 
 const Home = () => {
   return (
     <S.Home>
       <S.HomeContent>
         <header>
-          <Navbar/>
+          <Navbar />
         </header>
-        <About/>
+        <About />
+        <Objectives />
       </S.HomeContent>
     </S.Home>
   );
