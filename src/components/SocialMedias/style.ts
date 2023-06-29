@@ -7,6 +7,9 @@ export const SocialMediasUl = styled.ul`
         bottom: 1.25rem;
         display: flex;
         align-items: center;
+        @media(max-width: 767px){
+            left: 1rem;
+        }
     `}
 `;
 

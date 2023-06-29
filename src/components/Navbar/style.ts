@@ -16,6 +16,9 @@ export const HomeNavbarTitle = styled.h1`
 	margin: 0;
     padding-left: 2.5rem;
     font-size: ${theme.constants.logoFontSize};
+	@media(max-width: 767px){
+		
+	}
   `}
 `;
 

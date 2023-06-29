@@ -5,10 +5,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 const Navbar = () => {
     return (
         <S.HomeNavBar className="navbar navbar-expand-lg">
-                <S.HomeNavbarTitle className="col-7">
+                <S.HomeNavbarTitle className="col-sm-7 col-10">
                     Thiago Alves
                 </S.HomeNavbarTitle>
-                <S.ContainerNavbar className=" col-5 collapse navbar-collapse justify-content-center">
+                <S.ContainerNavbar className="col-5 collapse navbar-collapse justify-content-center">
                     <S.HomeUlNavbar className="navbar-nav">
                         <S.HomeLiNavbar className="nav-item">
                             <S.HomeTagANavbar href="#about">About me</S.HomeTagANavbar>
