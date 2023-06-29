@@ -39,7 +39,7 @@ const buttonFilled = (color = colors.btnDarkGreen) => css`
   background: ${color};
   border: none;
   border-radius: 8px;
-  color: ${colors.textColor};
+  color: ${colors.textColorWhite};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,7 +64,7 @@ const buttonIcon = (active = false) => css`
   border: none;
   cursor: pointer;
   background-color: ${active ? colors.btnDarkGreen : "transparent"};
-  color: ${active ? colors.textColor : colors.btnDarkGreen};
+  color: ${active ? colors.textColorWhite : colors.btnDarkGreen};
   ${active && buttonIconModifiers.active()}
 `;
 
@@ -75,7 +75,7 @@ const buttonToggle = (active = false) => css`
   height: 35px;
   cursor: pointer;
   background-color: ${active ? colors.btnDarkGreen : "transparent"};
-  color: ${active ? colors.textColor : colors.btnDarkGreen};
+  color: ${active ? colors.textColorWhite : colors.btnDarkGreen};
 `;
 
 const input = () => css`
@@ -93,7 +93,7 @@ const select = (important = true) => css`
   appearance: none;
   background: ${important ? colors.btnLight : "transparent"};
   border: ${important ? "none" : "1px solid " + colors.baseLine};
-  color: ${colors.textColor};
+  color: ${colors.textColorWhite};
   background-repeat: no-repeat;
   padding-right: 50px;
   background-position: 85%;

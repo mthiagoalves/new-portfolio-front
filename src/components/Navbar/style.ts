@@ -1,7 +1,11 @@
 import styled, { css } from "styled-components";
 
 export const HomeNavBar = styled.nav`
-    
+	${() => css`
+    width:100%;
+	position:absolute;
+	z-index: 10;
+	`}
 `;
 
 
@@ -9,15 +13,10 @@ export const HomeNavbarTitle = styled.h1`
   ${({ theme }) => css`
     color: ${theme.colors.textColor};
     text-transform: uppercase;
-    margin: 0;
-    font-size: 20px;
+	margin: 0;
+    padding-left: 2.5rem;
+    font-size: ${theme.constants.logoFontSize};
   `}
-`;
-
-export const ContainerFluid = styled.div`
-    ${() => css `
-		max-width: 80rem;
-	`}
 `;
 
 export const ContainerNavbar = styled.div`
@@ -35,11 +34,11 @@ export const HomeLiNavbar = styled.li`
 export const HomeTagANavbar = styled.a`
 	${({ theme }) => css`
 		display:block;
-		color: ${theme.colors.textColor};
+		color: ${theme.colors.textColorDark};
 		padding: 0.5rem;
-		margin: 0rem 2rem;
+		margin: 0rem 1rem;
 		text-decoration: none;
-		font-size: 16px;
+		font-size: 1rem;
 
 		&:hover {
 			color: ${theme.colors.hoverColor};
