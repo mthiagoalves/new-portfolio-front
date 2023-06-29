@@ -1,7 +1,6 @@
 import * as S from './style';
 import SocialMedias from 'components/SocialMedias';
 import photothumb from 'assets/images/photothumb.jpg';
-
 import 'bootstrap/dist/css/bootstrap.css';
 
 
