@@ -1,5 +1,4 @@
 import * as S from './style';
-import Navbar from 'components/Navbar';
 import About from 'components/About';
 import Objectives from 'components/Objectives';
 import Sidebar from 'components/Sidebar';
@@ -8,12 +7,13 @@ const Home = () => {
   return (
     <S.Home>
       <S.HomeContent>
-        <header className='d-sm-block d-none'>
-          <Navbar />
+        <header>
+          <Sidebar />
         </header>
-        <Sidebar />
-        <About />
-        <Objectives />
+        <section>
+          <About />
+          <Objectives />
+        </section>
       </S.HomeContent>
     </S.Home>
   );
