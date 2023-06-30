@@ -2,6 +2,7 @@ import * as S from './style';
 import About from 'components/About';
 import Objectives from 'components/Objectives';
 import Sidebar from 'components/Sidebar';
+import Knowledges from 'components/Knowledges';
 
 const Home = () => {
   return (
@@ -12,7 +13,12 @@ const Home = () => {
         </header>
         <section>
           <About />
+        </section>
+        <section>
           <Objectives />
+        </section>
+        <section>
+          <Knowledges />
         </section>
       </S.HomeContent>
     </S.Home>
