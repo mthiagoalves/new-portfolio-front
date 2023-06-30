@@ -6,6 +6,7 @@ export const colors = {
 
     bgColorDark: '#181a1b',
     bgColorWhite: '#ffffff',
+    bgColorIce: '#f5f5f5',
     bgColorGreen: '#096334',
 
     btnDarkGreen: 'linear-gradient(to right, #136a8a 0%, #267871  51%, #136a8a  100%)',

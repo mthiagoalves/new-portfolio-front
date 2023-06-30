@@ -1,9 +1,9 @@
 import * as S from './style';
-import github from 'assets/images/github.png'
-import facebook from 'assets/images/facebook.png'
-import instagram from 'assets/images/instagram.png'
-import linkedin from 'assets/images/linkedin.png'
-import twitter from 'assets/images/twitter.png'
+import github from 'assets/images/socialmedias/github.png'
+import facebook from 'assets/images/socialmedias/facebook.png'
+import instagram from 'assets/images/socialmedias/instagram.png'
+import linkedin from 'assets/images/socialmedias/linkedin.png'
+import twitter from 'assets/images/socialmedias/twitter.png'
 
 const SocialMedias = () => {
     return (
