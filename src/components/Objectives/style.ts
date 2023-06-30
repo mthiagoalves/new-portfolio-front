@@ -50,7 +50,7 @@ export const ImgSection = styled.img`
     ${() => css`
         max-width: 70%;
         height: auto;
-        margin: 0 auto;
+        margin: 1.6rem;
     `}
 `;
 

@@ -10,12 +10,12 @@ interface ToggleContainerProps {
 export const ToggleContainer = styled.div<ToggleContainerProps>`
     ${({ isActive, theme }) => css`
         position: fixed;
-        top: 2.6rem;
+        top: 3.5rem;
         right: 1.5rem;
-        width: 50px;
-        height: 50px;
+        width: 3.125rem;
+        height: 3.125rem;
         background: ${theme.colors.bgColorDark} url(${menu});
-        background-size: 30px;
+        background-size: 1.875rem;
         background-position: center;
         background-repeat: no-repeat;
         transition: 0.2s;
@@ -24,7 +24,7 @@ export const ToggleContainer = styled.div<ToggleContainerProps>`
   
         ${isActive && css`
             background: ${theme.colors.bgColorDark} url(${close});
-            background-size: 25px;
+            background-size: 1.563rem;
             background-position: center;
             background-repeat: no-repeat;
         `}
@@ -33,17 +33,18 @@ export const ToggleContainer = styled.div<ToggleContainerProps>`
 
 interface SidebarProps {
     isActive: boolean;
-  }
+}
 
 export const Sidebar = styled.div<SidebarProps>`
-    ${({isActive, theme}) => css`
+    ${({ isActive, theme }) => css`
         position: fixed;
         background: ${theme.colors.bgColorDark};
         display: flex;
         justify-content: center;
         align-items: center;
         transition: 0.5s;
-        padding: 40px;
+        // padding: 2.5rem;
+        height: 100%;
         z-index: 100;
         right: -100%;
 
@@ -51,4 +52,26 @@ export const Sidebar = styled.div<SidebarProps>`
             right: 0;
         `}
     `}
+`;
+
+export const MenuLi = styled.li`
+  ${() => css`
+        list-style:none;
+  `}
+`;
+
+export const MenuA = styled.a`
+  ${({theme}) => css`
+        color: ${theme.colors.textColorWhite};
+        text-decoration: none;
+        font-size: ${theme.constants.logoFontSize};
+        margin: 10px 0;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: .5s;
+        &:hover{
+            color: ${theme.colors.textColorGreen};
+        }
+  `}
 `;

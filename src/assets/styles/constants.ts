@@ -1,6 +1,6 @@
 export const constants = {
     logoFontFamily: 'Poppins',
-    logoFontSize: '1.8rem',
+    logoFontSize: '2rem',
     logoLineHeight: '140%',
 
     headingFontFamily: 'Barlow',
