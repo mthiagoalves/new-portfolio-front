@@ -3,6 +3,7 @@ import About from 'components/About';
 import Objectives from 'components/Objectives';
 import Sidebar from 'components/Sidebar';
 import Knowledges from 'components/Knowledges';
+import Projects from 'components/Projects';
 
 const Home = () => {
   return (
@@ -19,6 +20,9 @@ const Home = () => {
         </section>
         <section>
           <Knowledges />
+        </section>
+        <section>
+          <Projects />
         </section>
       </S.HomeContent>
     </S.Home>
