@@ -7,10 +7,10 @@ interface KnowledgesBoxProps {
     description: string;
 };
 
-const CardKnowledges: React.FC<KnowledgesBoxProps> = ({imageSrc, imageAlt, title, description}) => {
+const CardKnowledges: React.FC<KnowledgesBoxProps> = ({ imageSrc, imageAlt, title, description }) => {
     return (
         <S.KnowledgesBx className='col-sm-4 col-6'>
-            <S.KnowledgesImg src={imageSrc} alt={imageAlt}/>
+            <S.KnowledgesImg src={imageSrc} alt={imageAlt} />
             <S.KnowledgesH2>{title}</S.KnowledgesH2>
             <S.KnowledgesP>{description}</S.KnowledgesP>
         </S.KnowledgesBx>
