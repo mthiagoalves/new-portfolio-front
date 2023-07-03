@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const FourthSection = styled.div`
-    ${({theme}) => css`
+    ${({ theme }) => css`
         background-color: ${theme.colors.bgColorWhite};
         padding: 3rem 5rem;
         @media(max-width: 767px){
@@ -17,7 +17,7 @@ export const DivTitleSection = styled.div`
 `;
 
 export const TitleSection = styled.h2`
-    ${({theme}) => css`
+    ${({ theme }) => css`
         position: relative;
         color: ${theme.colors.textColorGreen};
         font-size: ${theme.constants.bodyTitleFontSize};
@@ -37,11 +37,23 @@ export const TitleSection = styled.h2`
 `;
 
 export const TextSection = styled.p`
-    ${({theme}) => css`
+    ${({ theme }) => css`
         display: inline-block;
         font-size: ${theme.constants.bodyTextFontSize};
         margin: 1rem 0;
         color: ${theme.colors.textColorDark};
         text-align: justify;
     `}
+`;
+
+export const TextA = styled.a`
+        ${({ theme }) => css`
+            text-decoration: none;
+            color: ${theme.colors.textColorGreen};
+            font-weight: bold;
+            transition: 0.5s;
+            &:hover {
+                border-bottom: 1px solid ${theme.colors.textColorGreen}
+            }
+        `}
 `;

@@ -1,4 +1,7 @@
 import * as S from './style';
+import Github from 'assets/images/projects/icons/github.png'
+import Deploy from 'assets/images/projects/icons/deploy.png'
+import Info from 'assets/images/projects/icons/info.png'
 
 
 interface CardProjectsProps {
@@ -10,12 +13,24 @@ interface CardProjectsProps {
 const CardProjects: React.FC<CardProjectsProps> = ({ title, smallDescription, technologies }) => {
     return (
 
-        <S.CardProject className='col-6 col-sm-3'>
+        <S.CardProject className='col-6 col-sm-3 text-center'>
+            <S.DivAbsolute>
+                <a href="/">
+                    <S.CardImg src={Info} alt='Repository' title='More info about this project'/>
+                </a>
+            </S.DivAbsolute>
             <S.TitleCard>{title}</S.TitleCard>
             <S.SmallDescriptionCard>{smallDescription}</S.SmallDescriptionCard>
             <S.TechnologiesCard>{technologies}</S.TechnologiesCard>
+            <S.DivIcons>
+                <a href="/">
+                    <S.CardImg src={Github} alt='Repository' title='Repository'/>
+                </a>
+                <a href="/"> 
+                    <S.CardImg src={Deploy} alt='Deploy' title='Deploy'/>
+                </a>
+            </S.DivIcons>
         </S.CardProject>
     );
 };
-
 export default CardProjects;
