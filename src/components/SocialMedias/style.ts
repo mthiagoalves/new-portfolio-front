@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const SocialMediasUl = styled.ul`
     ${() => css`
         position: absolute;
-        left: 6.25rem;
+        left: 5rem;
         bottom: 1.25rem;
         display: flex;
         align-items: center;

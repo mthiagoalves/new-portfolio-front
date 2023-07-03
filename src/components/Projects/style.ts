@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const FourthSection = styled.div`
     ${({theme}) => css`
         background-color: ${theme.colors.bgColorWhite};
-        padding: 3rem 6.25rem;
+        padding: 3rem 5rem;
         @media(max-width: 767px){
             padding: 3rem 2.25rem;
         }

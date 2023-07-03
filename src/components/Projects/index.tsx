@@ -12,7 +12,26 @@ const Projects = () => {
                     Here are my main projects so far. I only selected some, the others can be accessed through my GitHub
                 </S.TextSection>
             </S.DivTitleSection>
-            <CardProjects title='Project 1' smallDescription='any description' technologies='Javascript' />
+            <div className="container-fluid p-0">
+                <div className="row m-0">
+                    <CardProjects title='Project 1' smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
+' technologies='Javascript' />
+                    <CardProjects title='Project 2' smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
+' technologies='Javascript' />
+                    <CardProjects title='Project 2' smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
+' technologies='Javascript' />
+                    <CardProjects title='Project 2' smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
+' technologies='Javascript' />
+                    <CardProjects title='Project 1' smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
+' technologies='Javascript' />
+                    <CardProjects title='Project 2' smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
+' technologies='Javascript' />
+                    <CardProjects title='Project 2' smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
+' technologies='Javascript' />
+                    <CardProjects title='Project 2' smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
+' technologies='Javascript' />
+                </div>
+            </div>
         </S.FourthSection>
     );
 };

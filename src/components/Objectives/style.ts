@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const SecondSection = styled.div`
     ${({theme}) => css`
         background-color: ${theme.colors.bgColorWhite};
-        padding: 3rem 6.25rem;
+        padding: 3rem 5rem;
         @media(max-width: 767px){
             padding: 3rem 2.25rem;
         }
@@ -50,7 +50,7 @@ export const ImgSection = styled.img`
     ${() => css`
         max-width: 70%;
         height: auto;
-        margin: 1.6rem;
+        margin: 2rem;
     `}
 `;
 

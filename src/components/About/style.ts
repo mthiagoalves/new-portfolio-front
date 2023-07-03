@@ -17,7 +17,7 @@ export const ContentBx = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 6.25rem;
+        padding: 5rem;
         @media(max-width: 767px){
             padding: 1.5rem;
             top: 0;
@@ -29,7 +29,7 @@ export const LogoText = styled.h5`
     ${({theme}) => css`
         position: absolute;
         top: 3.5rem;
-        left: 6.25rem;
+        left: 5rem;
         max-width: 10.438rem;
         font-size: 1.3rem;
         text-transform: uppercase;
@@ -49,7 +49,7 @@ export const TitleH5 = styled.h5`
     ${({theme}) => css ` 
         position: absolute;
         top: 2.5rem;
-        left: 6.25rem;
+        left: 5rem;
         font-size: 1.5rem;
         text-transform: uppercase;
         letter-spacing: 0.063rem;
