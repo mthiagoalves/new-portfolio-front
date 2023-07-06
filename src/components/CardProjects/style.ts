@@ -15,6 +15,7 @@ export const CardProject = styled.div`
     &:hover {
       background: url(${Bg});
       background-size: cover;
+      background-position: center;
       & ${DivAbsolute} {
         opacity: 1;
       }
