@@ -43,7 +43,6 @@ export const Sidebar = styled.div<SidebarProps>`
         justify-content: center;
         align-items: center;
         transition: 0.5s;
-        // padding: 2.5rem;
         height: 100%;
         z-index: 100;
         right: -100%;

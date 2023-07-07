@@ -7,17 +7,19 @@ import Info from 'assets/images/projects/icons/info.png'
 interface CardProjectsProps {
     title: string,
     smallDescription: string,
-    technologies: string
+    technologies: string,
+    onOpenModal: () => void;
 };
 
-const CardProjects: React.FC<CardProjectsProps> = ({ title, smallDescription, technologies }) => {
+const CardProjects: React.FC<CardProjectsProps> = ({ title, smallDescription, technologies, onOpenModal }) => {
+    
     return (
 
         <S.CardProject className='col-6 col-sm-3 text-center'>
             <S.DivAbsolute>
-                <a href="/">
-                    <S.CardImg src={Info} alt='Repository' title='More info about this project'/>
-                </a>
+                
+                    <S.CardImg onClick={onOpenModal} src={Info} alt='Repository' title='More info about this project'/>
+                
             </S.DivAbsolute>
             <S.TitleCard>{title}</S.TitleCard>
             <S.SmallDescriptionCard>{smallDescription}</S.SmallDescriptionCard>

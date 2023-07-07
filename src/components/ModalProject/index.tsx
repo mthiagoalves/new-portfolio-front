@@ -12,7 +12,7 @@ interface ModalProjectProps {
 const ModalProject: React.FC<ModalProjectProps> = ({ title, description, technologies }) => {
     return (
         <div>
-            <S.Modal closing={true}>
+            <S.Modal closing={false}>
                 <S.Content>
                     <h2>{title}</h2>
                     <p>{description}</p>
