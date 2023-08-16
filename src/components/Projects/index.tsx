@@ -1,10 +1,73 @@
+import React, { useState } from 'react';
 import * as S from './style';
-import { useState } from 'react';
-import CardProjects from 'components/CardProjects';
 import ModalProject from 'components/ModalProject';
+import CardProjects from 'components/CardProjects';
+
+interface ProjectInfo {
+    title: string;
+    smallDescription: string;
+    description: string;
+    technologies: string;
+}
 
 const Projects = () => {
-    const [openModal, setOpenModal] = useState<boolean>(false);
+    const [selectedCard, setSelectedCard] = useState<ProjectInfo | undefined>(undefined);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const openModal = (card: ProjectInfo) => {
+        setSelectedCard(card);
+        setModalIsOpen(true);
+    };
+
+    const closeModal = () => {
+        setSelectedCard(undefined);
+        setModalIsOpen(false);
+    };
+
+    const cards = [
+        {
+            title: 'Project 1',
+            smallDescription: 'Description of project 1...',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            technologies: 'React, TypeScript',
+        },
+        {
+            title: 'Project 2',
+            smallDescription: 'Description of project 2...',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            technologies: 'React, Node.js',
+        },
+        {
+            title: 'Project 3',
+            smallDescription: 'Description of project 3...',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            technologies: 'React, Node.js',
+        },
+        {
+            title: 'Project 4',
+            smallDescription: 'Description of project 4...',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            technologies: 'React, Node.js',
+        },
+        {
+            title: 'Project 5',
+            smallDescription: 'Description of project 5...',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            technologies: 'React, Node.js',
+        },
+        {
+            title: 'Project 6',
+            smallDescription: 'Description of project 6...',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            technologies: 'React, Node.js',
+        },
+        {
+            title: 'Project 7',
+            smallDescription: 'Description of project 7...',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            technologies: 'React, Node.js',
+        }
+    ];
     return (
         <S.FourthSection>
             <S.DivTitleSection>
@@ -17,25 +80,28 @@ const Projects = () => {
             </S.DivTitleSection>
             <div className="container-fluid p-0">
                 <div className="row m-0 justify-content-center">
-                    <CardProjects title='Project 1' onOpenModal={() => setOpenModal(true)} smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
-' technologies='Javascript' />
-                    <CardProjects title='Project 2' onOpenModal={() => setOpenModal(true)} smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
-' technologies='Javascript' />
-                    <CardProjects title='Project 2' onOpenModal={() => setOpenModal(true)} smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
-' technologies='Javascript' />
-                    <CardProjects title='Project 2' onOpenModal={() => setOpenModal(true)} smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
-' technologies='Javascript' />
-                    <CardProjects title='Project 1' onOpenModal={() => setOpenModal(true)} smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
-' technologies='Javascript' />
-                    <CardProjects title='Project 2' onOpenModal={() => setOpenModal(true)} smallDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum pariatur ab error temporibus quia?
-' technologies='Javascript' />
+                    {cards.map((card, index) => (
+                        <CardProjects
+                            key={index}
+                            title={card.title}
+                            smallDescription={card.smallDescription}
+                            technologies={card.technologies}
+                            onInfoClick={() => openModal(card)} 
+                        />
+                    ))}
                 </div>
             </div>
-            {openModal && (
-                <ModalProject title='Project 1' description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat est asperiores ipsum inventore saepe? Aspernatur mollitia voluptates dolor. Necessitatibus hic laborum non aut nobis ipsam quibusdam dolorum ad praesentium natus, nulla nam! Molestiae sapiente magni animi rem, quasi saepe porro ut quisquam distinctio aliquid quam vero eaque non perspiciatis neque nostrum provident corporis, incidunt dolor, quibusdam architecto. Ipsa minus fugiat quam inventore sequi ratione odit veritatis, repellendus quod explicabo enim deleniti quo totam perferendis labore ex eveniet nostrum illum autem, consequuntur veniam, quasi nihil fuga reprehenderit. Minima, expedita? Facere, sunt. Quidem doloremque eius magnam consequuntur possimus id eveniet veniam, voluptatum, hic ipsa quibusdam? Nesciunt, vero accusantium. Odio, saepe, ipsum quas voluptatum debitis facere est qui ea minima error nihil atque repellat excepturi maiores fuga rerum libero? Eligendi eius illum nobis alias ad neque esse! Tenetur, rem repellendus pariatur beatae possimus obcaecati neque repellat in magni sint harum minima sequi aliquid!
-    ' technologies='Javascript' />
+            {selectedCard !== undefined && (
+                <ModalProject
+                    isOpen={modalIsOpen}
+                    onClose={closeModal}
+                    title={selectedCard.title}
+                    description={selectedCard.description}
+                    technologies={selectedCard.technologies}
+                />
             )}
-        </S.FourthSection>
+
+        </S.FourthSection >
     );
 };
 

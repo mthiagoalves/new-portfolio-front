@@ -8,18 +8,15 @@ interface CardProjectsProps {
     title: string,
     smallDescription: string,
     technologies: string,
-    onOpenModal: () => void;
+    onInfoClick: () => void
 };
 
-const CardProjects: React.FC<CardProjectsProps> = ({ title, smallDescription, technologies, onOpenModal }) => {
-    
+const CardProjects: React.FC<CardProjectsProps> = ({ title, smallDescription, technologies, onInfoClick }) => {
     return (
 
         <S.CardProject className='col-6 col-sm-3 text-center'>
             <S.DivAbsolute>
-                
-                    <S.CardImg onClick={onOpenModal} src={Info} alt='Repository' title='More info about this project'/>
-                
+                    <S.CardImg src={Info} onClick={onInfoClick} alt='Repository' title='More info about this project'/>
             </S.DivAbsolute>
             <S.TitleCard>{title}</S.TitleCard>
             <S.SmallDescriptionCard>{smallDescription}</S.SmallDescriptionCard>

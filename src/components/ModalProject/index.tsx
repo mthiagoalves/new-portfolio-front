@@ -2,17 +2,20 @@ import * as S from './style';
 import Github from 'assets/images/projects/icons/github.png';
 import Deploy from 'assets/images/projects/icons/deploy.png';
 import Close from 'assets/images/close.gif';
+import ReactModal from 'react-modal';
 
-interface ModalProjectProps {
-    title: string,
-    description: string,
-    technologies: string
+interface ModalProjectProps extends ReactModal.Props {
+    isOpen: boolean;
+    onClose: () => void;
+    title: string;
+    description: string;
+    technologies: string;
 };
 
-const ModalProject: React.FC<ModalProjectProps> = ({ title, description, technologies }) => {
+const ModalProject: React.FC<ModalProjectProps> = ({ title, description, technologies, isOpen, onClose }) => {
     return (
         <div>
-            <S.Modal closing={false}>
+            <S.Modal isOpen={isOpen} onRequestClose={onClose} contentLabel="Card Modal">
                 <S.Content>
                     <h2>{title}</h2>
                     <p>{description}</p>
@@ -25,7 +28,7 @@ const ModalProject: React.FC<ModalProjectProps> = ({ title, description, technol
                             <S.CardImg src={Deploy} alt='Deploy' title='Deploy' />
                         </a>
                     </S.DivIcons>
-                    <S.BtnClose>
+                    <S.BtnClose onClick={onClose}>
                         <S.CloseImg src={Close} alt='Close' title='Close' />
                     </S.BtnClose>
                 </S.Content>
