@@ -45,3 +45,62 @@ export const TextSection = styled.p`
         text-align: justify;
     `}
 `;
+
+export const GroupForm = styled.div`
+    ${() => css`
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .5rem;
+    `}
+`;
+
+export const LabelForm = styled.label`
+    ${({ theme }) => css`
+        font-size: ${theme.constants.bodyTextFontSize};
+        color: ${theme.colors.textColorWhite};
+    `}
+`;
+
+export const TransparentInput = styled.input`
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 8px;
+  border-radius: 8px;
+`;
+
+export const BtnSubmit = styled.button`
+    ${({ theme }) => css`
+        background: ${theme.colors.bgColorGreen};
+        color: ${theme.colors.textColorWhite};
+        max-width: 12rem;
+        padding: 0.625rem 1.875rem;
+        margin: .5rem 0;
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 0.125rem;
+        border: none;
+        @media(max-width: 767px){ 
+            margin-top: 3rem;
+        }
+    `}
+`;
+
+export const ImgContact = styled.img`
+    ${() => css`
+        /* transform: scale(0.5); */
+        opacity: 0.7;
+        transition: 0.7s;
+        filter: invert(100%);
+        &:hover{
+            transform: scale(0.9);
+            opacity: 1;
+        }
+    `}
+`;
+
+export const AContact = styled.a`
+    ${() => css`
+        text-decoration: none;
+    `}
+`;
