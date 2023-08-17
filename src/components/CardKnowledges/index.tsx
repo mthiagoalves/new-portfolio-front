@@ -12,7 +12,7 @@ const CardKnowledges: React.FC<KnowledgesBoxProps> = ({ imageSrc, imageAlt, titl
         <S.KnowledgesBx className='col-sm-4 col-6'>
             <S.KnowledgesImg src={imageSrc} alt={imageAlt} />
             <S.KnowledgesH2>{title}</S.KnowledgesH2>
-            <S.KnowledgesP>{description}</S.KnowledgesP>
+            <S.KnowledgesP>Level: {description}</S.KnowledgesP>
         </S.KnowledgesBx>
     );
 }
