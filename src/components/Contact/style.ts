@@ -4,6 +4,8 @@ export const FiveScetion = styled.div`
     ${({ theme }) => css`
         background-color: ${theme.colors.bgColorDark};
         padding: 3rem 6.25rem;
+        min-height: 100vh;
+        position: relative;
         @media(max-width: 767px){
             padding: 3rem 2.25rem;
         }
@@ -62,11 +64,24 @@ export const LabelForm = styled.label`
 `;
 
 export const TransparentInput = styled.input`
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-  padding: 8px;
-  border-radius: 8px;
+    ${() => css`
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 8px;
+        border-radius: 8px;
+    `}
+`;
+
+export const StyledTextarea = styled.textarea`
+    ${() => css`
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 5px;
+        resize: vertical;
+    `}
 `;
 
 export const BtnSubmit = styled.button`
@@ -88,7 +103,6 @@ export const BtnSubmit = styled.button`
 
 export const ImgContact = styled.img`
     ${() => css`
-        /* transform: scale(0.5); */
         opacity: 0.7;
         transition: 0.7s;
         filter: invert(100%);
@@ -102,5 +116,17 @@ export const ImgContact = styled.img`
 export const AContact = styled.a`
     ${() => css`
         text-decoration: none;
+    `}
+`;
+
+export const TextFooter = styled.div`
+    ${({ theme }) => css`
+        width: 100%;
+        font-size: 1rem;
+        margin: 1rem 0;
+        color: ${theme.colors.textColorWhite};
+        text-align: center;
+        position: absolute;
+        left: 0;
     `}
 `;
