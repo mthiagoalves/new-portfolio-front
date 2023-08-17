@@ -3,18 +3,18 @@ import Github from 'assets/images/projects/icons/github.png'
 import Deploy from 'assets/images/projects/icons/deploy.png'
 import Info from 'assets/images/projects/icons/info.png'
 
-
 interface CardProjectsProps {
     title: string,
     smallDescription: string,
     technologies: string,
+    slug: string,
     onInfoClick: () => void
 };
 
-const CardProjects: React.FC<CardProjectsProps> = ({ title, smallDescription, technologies, onInfoClick }) => {
+const CardProjects: React.FC<CardProjectsProps> = ({ title, smallDescription, technologies, slug, onInfoClick }) => {
     return (
 
-        <S.CardProject className='col-6 col-sm-3 text-center'>
+        <S.CardProject className='col-6 col-sm-3 text-center' slug={slug}>
             <S.DivAbsolute>
                     <S.CardImg src={Info} onClick={onInfoClick} alt='Repository' title='More info about this project'/>
             </S.DivAbsolute>

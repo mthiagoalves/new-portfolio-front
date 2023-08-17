@@ -5,10 +5,10 @@ import CardProjects from 'components/CardProjects';
 import { projects } from 'mocks/projects';
 
 interface ProjectInfo {
-    title: string;
-    smallDescription: string;
-    description: string;
-    technologies: string;
+    title: string,
+    smallDescription: string,
+    description: string,
+    technologies: string
 }
 
 const Projects = () => {
@@ -43,6 +43,7 @@ const Projects = () => {
                             title={card.title}
                             smallDescription={card.smallDescription}
                             technologies={card.technologies}
+                            slug={card.slug}
                             onInfoClick={() => openModal(card)} 
                         />
                     ))}

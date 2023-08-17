@@ -1,8 +1,7 @@
 import styled, { css } from "styled-components";
-import Bg from 'assets/images/projects/backoffice-circu.jpg';
 
-export const CardProject = styled.div`
-  ${({theme}) => css`
+export const CardProject = styled.div<{ slug: string }>`
+  ${({theme, slug}) => css`
     position: relative;
     min-height: 18rem;
     margin: 1px;
@@ -13,7 +12,7 @@ export const CardProject = styled.div`
     background: ${theme.colors.bgColorIce};
     transition: .5s;
     &:hover {
-      background: url(${Bg});
+      background: url(${require(`assets/images/projects/${slug}.jpg`)});
       background-size: cover;
       background-position: center;
       & ${DivAbsolute} {
