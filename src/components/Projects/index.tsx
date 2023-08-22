@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as S from './style';
 import ModalProject from 'components/ModalProject';
 import CardProjects from 'components/CardProjects';
-import { projects } from 'mocks/projects';
+import axios from '../../Api';
+
+// import { projects } from 'mocks/projects';
+
+import { ProjectResponse, Project } from 'types/api/project';
 
 interface ProjectInfo {
     title: string,
@@ -25,6 +29,22 @@ const Projects = () => {
         setModalIsOpen(false);
     };
 
+    const [projects, setProjects] = useState<Project[]>([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get<ProjectResponse[]>('/project');
+                console.log(response);
+                setProjects(response.data);
+            } catch (error) {
+                console.error('Erro ao buscar os dados:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <S.FourthSection>
             <S.DivTitleSection>
@@ -42,7 +62,7 @@ const Projects = () => {
                             key={index}
                             title={card.title}
                             smallDescription={card.smallDescription}
-                            technologies={card.technologies}
+                            technologies={card.technologies.name}
                             slug={card.slug}
                             onInfoClick={() => openModal(card)} 
                         />

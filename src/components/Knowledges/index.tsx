@@ -11,7 +11,6 @@ const Knowledges = () => {
         const fetchData = async () => {
             try {
                 const response = await axios.get<TechnologiesResponse[]>('/technologies');
-                console.log(response.status);
                 setTechnologies(response.data);
             } catch (error) {
                 console.error('Erro ao buscar os dados:', error);
