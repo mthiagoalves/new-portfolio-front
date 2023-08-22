@@ -1,8 +1,25 @@
 import * as S from './style';
-import { technologies } from 'mocks/technologies';
 import CardKnowledges from 'components/CardKnowledges';
+import axios from '../../Api';
+import { useEffect, useState } from 'react';
+import { Technologies, TechnologiesResponse } from 'types/api/technology';
 
 const Knowledges = () => {
+    const [technologies, setTechnologies] = useState<Technologies[]>([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get<TechnologiesResponse[]>('/technologies');
+                console.log(response.status);
+                setTechnologies(response.data);
+            } catch (error) {
+                console.error('Erro ao buscar os dados:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
     return (
         <S.ThirdSection>
             <S.DivTitleSection>
