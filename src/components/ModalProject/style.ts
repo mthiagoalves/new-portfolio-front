@@ -13,7 +13,7 @@ export const Modal = styled(ReactModal)`
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.6);
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    @media(max-width: 756px) {
+    @media(max-width: 47.25rem) {
       overflow-y: auto;
     }
   `}
@@ -28,6 +28,9 @@ export const Content = styled.div`
     max-width: 85%;
     text-align: justify;
     text-align-last: center;
+    @media(max-width: 47.25rem){
+      margin: 75rem 0rem 3rem 0rem;
+    }
   `}
 `;
 
