@@ -2,19 +2,20 @@ import styled, { css } from "styled-components";
 import ReactModal from 'react-modal';
 
 export const Modal = styled(ReactModal)`
-  ${({ theme }) => css`
+  ${() => css`
     display: flex;
     justify-content: center;
     align-items: center;
-    
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-
     background-color: rgba(0, 0, 0, 0.6);
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    @media(max-width: 756px) {
+      overflow-y: auto;
+    }
   `}
 `;
 
@@ -31,7 +32,7 @@ export const Content = styled.div`
 `;
 
 export const DivIcons = styled.div`
-  ${({ theme }) => css`
+  ${() => css`
     width: 100%;
     display: flex;
     justify-content: center;
@@ -40,7 +41,7 @@ export const DivIcons = styled.div`
 `;
 
 export const CardImg = styled.img`
-  ${({ theme }) => css`
+  ${() => css`
     max-width: 30px;
     height: auto;
     margin: 0 50px;
@@ -48,14 +49,14 @@ export const CardImg = styled.img`
 `;
 
 export const CloseImg = styled.img`
-  ${({ theme }) => css`
+  ${() => css`
     max-width: 30px;
     height: auto;
   `}
 `;
 
 export const BtnClose = styled.div`
-  ${({ theme }) => css`
+  ${() => css`
     position: absolute;
     top: 0.313rem;
     right: 0.313rem;
