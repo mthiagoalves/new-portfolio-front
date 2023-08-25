@@ -11,6 +11,8 @@ interface ProjectInfo {
     slug: string,
     smallDescription: string,
     description: string,
+    deploy: string,
+    repository: string,
     technologies: string[]
 }
 
@@ -40,17 +42,17 @@ const Projects = () => {
                     slug: project.slug,
                     smallDescription: project.smallDescription,
                     description: project.description,
+                    repository: project.repository,
+                    deploy: project.deploy,
                     technologies: Array.isArray(project.technologies)
                         // @ts-ignore
                         ? project.technologies.map(tech => tech.name)
                         : [],
                     order: project.order
                 }));
-
-                console.log(transformedProjects);
                 setProjects(transformedProjects);
             } catch (error) {
-                console.error('Erro ao buscar os dados:', error);
+                console.error('Error to find projects:', error);
             }
         };
 
@@ -76,6 +78,8 @@ const Projects = () => {
                             smallDescription={card.smallDescription}
                             technologies={card.technologies}
                             slug={card.slug}
+                            deploy={card.deploy}
+                            repository={card.repository}
                             onInfoClick={() => openModal(card)}
                         />
                     ))}
@@ -88,6 +92,8 @@ const Projects = () => {
                     title={selectedCard.title}
                     description={selectedCard.description}
                     technologies={selectedCard.technologies}
+                    deploy={selectedCard.deploy}
+                    repository={selectedCard.repository}
                 />
             )}
         </S.FourthSection>

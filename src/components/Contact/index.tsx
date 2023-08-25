@@ -17,7 +17,7 @@ const Contact = () => {
             </S.DivTitleSection>
             <div className="container-fluid">
                 <div className="row m-0 justify-content-between">
-                    <div className="col-5 m-auto text-center">
+                    <div className="col-12 col-sm-5 m-auto text-center">
                         <div className="row m-0 justify-content-between">
                             <div className="col-3 p-0">
                                 <S.AContact href="mailto:m.thiago.alves@live.com">

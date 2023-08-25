@@ -34,7 +34,7 @@ export const KnowledgesH2 = styled.h2`
         font-weight: 600;
         transition: 0.5s;
         @media(max-width: 48rem){
-            font-size: 1.5rem
+            font-size: 1.4rem
         }
     `}
 `;
@@ -43,5 +43,8 @@ export const KnowledgesP = styled.p`
         margin: 0;
         transition: 0.5s;
         font-size: ${theme.constants.bodyTextFontSize};
+        @media(max-width: 48rem){
+            font-size: 1rem;
+        }
     `}
 `;

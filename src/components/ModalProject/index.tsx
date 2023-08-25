@@ -10,21 +10,23 @@ interface ModalProjectProps extends ReactModal.Props {
     title: string;
     description: string;
     technologies: string[];
+    deploy: string;
+    repository: string;
 };
 
-const ModalProject: React.FC<ModalProjectProps> = ({ title, description, technologies, isOpen, onClose }) => {
+const ModalProject: React.FC<ModalProjectProps> = ({ title, description, technologies, repository, deploy, isOpen, onClose }) => {
     return (
         <div>
             <S.Modal isOpen={isOpen} onRequestClose={onClose} contentLabel="Card Modal">
                 <S.Content>
                     <h2>{title}</h2>
-                    <p>{description}</p>
+                    <S.textDescription dangerouslySetInnerHTML={{ __html: description }}></S.textDescription>
                     <p>Technologies: {technologies.join(', ')}</p>
                     <S.DivIcons>
-                        <a href="/">
+                        <a href={repository} rel='noreferrer' target='_blank'>
                             <S.CardImg src={Github} alt='Repository' title='Repository' />
                         </a>
-                        <a href="/">
+                        <a href={deploy} rel='noreferrer' target='_blank'>
                             <S.CardImg src={Deploy} alt='Deploy' title='Deploy' />
                         </a>
                     </S.DivIcons>

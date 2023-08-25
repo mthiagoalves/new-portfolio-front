@@ -7,14 +7,16 @@ interface CardProjectsProps {
     title: string,
     smallDescription: string,
     technologies: string[],
+    deploy: string,
+    repository: string,
     slug: string,
     onInfoClick: () => void
 };
 
-const CardProjects: React.FC<CardProjectsProps> = ({ title, smallDescription, technologies, slug, onInfoClick }) => {
+const CardProjects: React.FC<CardProjectsProps> = ({ title, smallDescription, technologies, slug, deploy, repository, onInfoClick }) => {
     return (
 
-        <S.CardProject className='col-6 col-sm-3 text-center' slug={slug}>
+        <S.CardProject className='col-12 col-sm-3 text-center' slug={slug}>
             <S.DivAbsolute>
                 <S.CardImg src={Info} onClick={onInfoClick} alt='Repository' title='More info about this project' />
             </S.DivAbsolute>
@@ -22,10 +24,10 @@ const CardProjects: React.FC<CardProjectsProps> = ({ title, smallDescription, te
             <S.SmallDescriptionCard>{smallDescription}</S.SmallDescriptionCard>
             <S.TechnologiesCard>Technologies: {technologies.join(', ')}</S.TechnologiesCard>
             <S.DivIcons>
-                <a href="/">
+                <a href={repository} rel='noreferrer' target='_blank'>
                     <S.CardImg src={Github} alt='Repository' title='Repository' />
                 </a>
-                <a href="/">
+                <a href={deploy} rel='noreferrer' target='_blank'>
                     <S.CardImg src={Deploy} alt='Deploy' title='Deploy' />
                 </a>
             </S.DivIcons>

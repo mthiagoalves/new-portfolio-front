@@ -24,7 +24,7 @@ export const Content = styled.div`
     background-color: ${theme.colors.bgColorWhite};
     color: ${theme.colors.textColorDark};
     padding: 20px;
-    max-width: 70%;
+    max-width: 85%;
     text-align: justify;
     text-align-last: center;
   `}
@@ -60,5 +60,11 @@ export const BtnClose = styled.div`
     top: 0.313rem;
     right: 0.313rem;
     cursor: pointer;
+  `}
+`;
+
+export const textDescription = styled.p`
+  ${() => css`
+    font-size: 15px;
   `}
 `;

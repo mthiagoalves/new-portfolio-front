@@ -13,7 +13,7 @@ const Knowledges = () => {
                 const response = await axios.get<TechnologiesResponse[]>('/technologies');
                 setTechnologies(response.data);
             } catch (error) {
-                console.error('Erro ao buscar os dados:', error);
+                console.error('Error to find technologies:', error);
             }
         };
 
