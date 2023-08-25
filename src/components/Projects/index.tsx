@@ -60,7 +60,7 @@ const Projects = () => {
     }, []);
 
     return (
-        <S.FourthSection>
+        <S.FourthSection id='projects'>
             <S.DivTitleSection>
                 <S.TitleSection>
                     Projects

@@ -4,7 +4,6 @@ export const FiveScetion = styled.div`
     ${({ theme }) => css`
         background-color: ${theme.colors.bgColorDark};
         padding: 3rem 6.25rem;
-        min-height: 100vh;
         position: relative;
         @media(max-width: 767px){
             padding: 3rem 2.25rem;

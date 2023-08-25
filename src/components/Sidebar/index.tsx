@@ -16,27 +16,27 @@ const Sidebar: React.FC = () => {
             <S.Sidebar isActive={isSidebarActive} className='col-12 col-sm-5'>
                 <ul className='p-0'>
                     <S.MenuLi>
-                        <S.MenuA href='#home' id='home'>
+                        <S.MenuA href='#home' id='home-bar' onClick={handleClick}>
                             Home
                         </S.MenuA>
                     </S.MenuLi>
                     <S.MenuLi>
-                        <S.MenuA href='#about' id='about'>
+                        <S.MenuA href='#about' id='about-bar' onClick={handleClick}>
                             about
                         </S.MenuA>
                     </S.MenuLi>
                     <S.MenuLi>
-                        <S.MenuA href='#knowledges' id='knowledges'>
+                        <S.MenuA href='#knowledges' id='knowledges-bar' onClick={handleClick}>
                             knowledges
                         </S.MenuA>
                     </S.MenuLi>
                     <S.MenuLi>
-                        <S.MenuA href='#projects' id='projects'>
+                        <S.MenuA href='#projects' id='projects-bar' onClick={handleClick}>
                             projects
                         </S.MenuA>
                     </S.MenuLi>
                     <S.MenuLi>
-                        <S.MenuA href='#contact' id='contact'>
+                        <S.MenuA href='#contact' id='contact-bar' onClick={handleClick}>
                             contact
                         </S.MenuA>
                     </S.MenuLi>

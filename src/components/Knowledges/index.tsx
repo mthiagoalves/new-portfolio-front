@@ -20,7 +20,7 @@ const Knowledges = () => {
         fetchData();
     }, []);
     return (
-        <S.ThirdSection>
+        <S.ThirdSection id='knowledges'>
             <S.DivTitleSection>
                 <S.TitleSection>
                     Soft Skills

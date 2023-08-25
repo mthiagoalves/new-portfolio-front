@@ -3,7 +3,7 @@ import myson from 'assets/images/me-and-my-son.jpg'
 
 const Objectives = () => {
     return (
-        <S.SecondSection>
+        <S.SecondSection id='about'>
             <S.DivTitleSection>
                 <S.TitleSection>
                     About me

@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const About = () => {
     return (
-        <S.FirstSection className="container-fluid p-0">
+        <S.FirstSection className="container-fluid p-0" id='home'>
             <div className="row m-0">
                 <S.LogoText>
                     Portfolio 2.0

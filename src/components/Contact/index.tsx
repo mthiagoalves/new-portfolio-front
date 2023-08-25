@@ -6,7 +6,7 @@ import Ig from 'assets/images/socialmedias/instagram.png';
 
 const Contact = () => {
     return (
-        <S.FiveScetion>
+        <S.FiveScetion id='contact'>
             <S.DivTitleSection>
                 <S.TitleSection>
                     Contact Me
