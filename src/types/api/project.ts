@@ -3,7 +3,8 @@ export interface Project {
     slug: string;
     smallDescription: string;
     description: string;
-    order: number;
+    technologies: string[];
+    order?: number;
 }
 
 export interface ProjectUpdate {
@@ -17,7 +18,8 @@ export interface ProjectResponse {
     slug: string;
     smallDescription: string;
     description: string;
-    order: number;
+    technologies: string[];
+    order?: number;
     updateAt?: string;
     createdAt?: string;
 }

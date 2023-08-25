@@ -4,15 +4,14 @@ import ModalProject from 'components/ModalProject';
 import CardProjects from 'components/CardProjects';
 import axios from '../../Api';
 
-// import { projects } from 'mocks/projects';
-
 import { ProjectResponse, Project } from 'types/api/project';
 
 interface ProjectInfo {
     title: string,
+    slug: string,
     smallDescription: string,
     description: string,
-    technologies: string
+    technologies: string[]
 }
 
 const Projects = () => {
@@ -35,8 +34,21 @@ const Projects = () => {
         const fetchData = async () => {
             try {
                 const response = await axios.get<ProjectResponse[]>('/project');
-                console.log(response);
-                setProjects(response.data);
+                
+                const transformedProjects = response.data.map((project) => ({
+                    title: project.title,
+                    slug: project.slug,
+                    smallDescription: project.smallDescription,
+                    description: project.description,
+                    technologies: Array.isArray(project.technologies)
+                        // @ts-ignore
+                        ? project.technologies.map(tech => tech.name)
+                        : [],
+                    order: project.order
+                }));
+
+                console.log(transformedProjects);
+                setProjects(transformedProjects);
             } catch (error) {
                 console.error('Erro ao buscar os dados:', error);
             }
@@ -62,9 +74,9 @@ const Projects = () => {
                             key={index}
                             title={card.title}
                             smallDescription={card.smallDescription}
-                            technologies={card.technologies.name}
+                            technologies={card.technologies}
                             slug={card.slug}
-                            onInfoClick={() => openModal(card)} 
+                            onInfoClick={() => openModal(card)}
                         />
                     ))}
                 </div>
@@ -78,8 +90,7 @@ const Projects = () => {
                     technologies={selectedCard.technologies}
                 />
             )}
-
-        </S.FourthSection >
+        </S.FourthSection>
     );
 };
 

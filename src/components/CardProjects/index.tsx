@@ -6,7 +6,7 @@ import Info from 'assets/images/projects/icons/info.png'
 interface CardProjectsProps {
     title: string,
     smallDescription: string,
-    technologies: string,
+    technologies: string[],
     slug: string,
     onInfoClick: () => void
 };
@@ -16,17 +16,17 @@ const CardProjects: React.FC<CardProjectsProps> = ({ title, smallDescription, te
 
         <S.CardProject className='col-6 col-sm-3 text-center' slug={slug}>
             <S.DivAbsolute>
-                    <S.CardImg src={Info} onClick={onInfoClick} alt='Repository' title='More info about this project'/>
+                <S.CardImg src={Info} onClick={onInfoClick} alt='Repository' title='More info about this project' />
             </S.DivAbsolute>
             <S.TitleCard>{title}</S.TitleCard>
             <S.SmallDescriptionCard>{smallDescription}</S.SmallDescriptionCard>
-            <S.TechnologiesCard>{technologies}</S.TechnologiesCard>
+            <S.TechnologiesCard>Technologies: {technologies.join(', ')}</S.TechnologiesCard>
             <S.DivIcons>
                 <a href="/">
-                    <S.CardImg src={Github} alt='Repository' title='Repository'/>
+                    <S.CardImg src={Github} alt='Repository' title='Repository' />
                 </a>
-                <a href="/"> 
-                    <S.CardImg src={Deploy} alt='Deploy' title='Deploy'/>
+                <a href="/">
+                    <S.CardImg src={Deploy} alt='Deploy' title='Deploy' />
                 </a>
             </S.DivIcons>
         </S.CardProject>

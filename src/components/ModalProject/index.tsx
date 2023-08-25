@@ -9,7 +9,7 @@ interface ModalProjectProps extends ReactModal.Props {
     onClose: () => void;
     title: string;
     description: string;
-    technologies: string;
+    technologies: string[];
 };
 
 const ModalProject: React.FC<ModalProjectProps> = ({ title, description, technologies, isOpen, onClose }) => {
@@ -19,7 +19,7 @@ const ModalProject: React.FC<ModalProjectProps> = ({ title, description, technol
                 <S.Content>
                     <h2>{title}</h2>
                     <p>{description}</p>
-                    <p>Technologies: {technologies}</p>
+                    <p>Technologies: {technologies.join(', ')}</p>
                     <S.DivIcons>
                         <a href="/">
                             <S.CardImg src={Github} alt='Repository' title='Repository' />
