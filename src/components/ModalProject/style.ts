@@ -29,7 +29,7 @@ export const Content = styled.div`
     text-align: justify;
     text-align-last: center;
     @media(max-width: 47.25rem){
-      margin: 75rem 0rem 3rem 0rem;
+      margin: 70rem 0rem 3rem 0rem;
     }
   `}
 `;
