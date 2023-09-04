@@ -1,6 +1,6 @@
 import * as S from './style';
 import SocialMedias from 'components/SocialMedias';
-import photothumb from 'assets/images/photothumb.jpg';
+import mybannerphoto from 'assets/images/mybannerphoto.jpg';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -21,7 +21,7 @@ const About = () => {
                     <S.BtnDownloadCV href='https://drive.google.com/file/d/11l6HAugcwO9X7YXn3z5OLrVGLB7OaQhr/view?usp=drive_link' target='_blank'>Download CV</S.BtnDownloadCV>
                 </S.ContentBx>
                 <S.DivImage className="col-5 p-0 d-none d-sm-block">
-                    <S.Photothumb src={photothumb} alt='image photothumb' />
+                    <S.Photothumb src={mybannerphoto} alt='image photothumb' />
                 </S.DivImage>
                 <SocialMedias />
             </div>
