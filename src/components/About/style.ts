@@ -118,6 +118,10 @@ export const BtnDownloadCV = styled.a`
         font-weight: 500;
         letter-spacing: 0.125rem;
         text-align: center;
+        transition: 3s ease;
+        &:hover{
+            background: rgb(6 69 36);
+        }
         @media(max-width: 767px){ 
             margin-top: 3rem;
         }
