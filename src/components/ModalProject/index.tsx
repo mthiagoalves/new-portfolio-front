@@ -9,7 +9,7 @@ interface ModalProjectProps extends ReactModal.Props {
     onClose: () => void;
     title: string;
     description: string;
-    technologies: string[];
+    technologies: string;
     deploy: string;
     repository: string;
 };
@@ -21,14 +21,24 @@ const ModalProject: React.FC<ModalProjectProps> = ({ title, description, technol
                 <S.Content>
                     <h2>{title}</h2>
                     <S.textDescription dangerouslySetInnerHTML={{ __html: description }}></S.textDescription>
-                    <p>Technologies: {technologies.join(', ')}</p>
+                    <p>Technologies: {technologies.split(', ').map((tech, index) => (
+                        <span key={index}>
+                            {index > 0 && ', '} {/* Adiciona vírgula entre tecnologias, exceto para a primeira */}
+                            {tech.trim()}
+                        </span>
+                    ))}</p>
                     <S.DivIcons>
-                        <a href={repository} rel='noreferrer' target='_blank'>
-                            <S.CardImg src={Github} alt='Repository' title='Repository' />
-                        </a>
-                        <a href={deploy} rel='noreferrer' target='_blank'>
-                            <S.CardImg src={Deploy} alt='Deploy' title='Deploy' />
-                        </a>
+                        {repository !== '#' && (
+                            <a href={repository} rel='noreferrer' target='_blank'>
+                                <S.CardImg src={Github} alt='Repository' title='Repository' />
+                            </a>
+                        )}
+                        {deploy !== '#' && (
+                            <a href={deploy} rel='noreferrer' target='_blank'>
+                                <S.CardImg src={Deploy} alt='Deploy' title='Deploy' />
+                            </a>
+                        )}
+                        
                     </S.DivIcons>
                     <S.BtnClose onClick={onClose}>
                         <S.CloseImg src={Close} alt='Close' title='Close' />

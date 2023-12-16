@@ -1,19 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import * as S from './style';
 import ModalProject from 'components/ModalProject';
 import CardProjects from 'components/CardProjects';
-import axios from '../../Api';
-
-import { ProjectResponse, Project } from 'types/api/project';
+import { projects } from 'mocks/projects';
 
 interface ProjectInfo {
-    title: string,
-    slug: string,
-    smallDescription: string,
-    description: string,
-    deploy: string,
-    repository: string,
-    technologies: string[]
+    title: string;
+    slug: string;
+    smallDescription: string;
+    description: string;
+    deploy: string;
+    repository: string;
+    technologies: string;
 }
 
 const Projects = () => {
@@ -30,34 +28,6 @@ const Projects = () => {
         setModalIsOpen(false);
     };
 
-    const [projects, setProjects] = useState<Project[]>([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get<ProjectResponse[]>('/project');
-                
-                const transformedProjects = response.data.map((project) => ({
-                    title: project.title,
-                    slug: project.slug,
-                    smallDescription: project.smallDescription,
-                    description: project.description,
-                    repository: project.repository,
-                    deploy: project.deploy,
-                    technologies: Array.isArray(project.technologies)
-                        // @ts-ignore
-                        ? project.technologies.map(tech => tech.name)
-                        : [],
-                    order: project.order
-                }));
-                setProjects(transformedProjects);
-            } catch (error) {
-                console.error('Error to find projects:', error);
-            }
-        };
-
-        fetchData();
-    }, []);
 
     return (
         <S.FourthSection id='projects'>
@@ -76,7 +46,7 @@ const Projects = () => {
                             key={index}
                             title={card.title}
                             smallDescription={card.smallDescription}
-                            technologies={card.technologies}
+                            technologies={card.technologies.split(', ').map(tech => tech.trim())}
                             slug={card.slug}
                             deploy={card.deploy}
                             repository={card.repository}

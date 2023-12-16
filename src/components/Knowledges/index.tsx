@@ -1,24 +1,9 @@
 import * as S from './style';
 import CardKnowledges from 'components/CardKnowledges';
-import axios from '../../Api';
-import { useEffect, useState } from 'react';
-import { Technologies, TechnologiesResponse } from 'types/api/technology';
+import { technologies } from 'mocks/technologies';
 
 const Knowledges = () => {
-    const [technologies, setTechnologies] = useState<Technologies[]>([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get<TechnologiesResponse[]>('/technologies');
-                setTechnologies(response.data);
-            } catch (error) {
-                console.error('Error to find technologies:', error);
-            }
-        };
-
-        fetchData();
-    }, []);
+   
     return (
         <S.ThirdSection id='knowledges'>
             <S.DivTitleSection>

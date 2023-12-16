@@ -24,12 +24,16 @@ const CardProjects: React.FC<CardProjectsProps> = ({ title, smallDescription, te
             <S.SmallDescriptionCard>{smallDescription}</S.SmallDescriptionCard>
             <S.TechnologiesCard>Technologies: {technologies.join(', ')}</S.TechnologiesCard>
             <S.DivIcons>
-                <a href={repository} rel='noreferrer' target='_blank'>
-                    <S.CardImg src={Github} alt='Repository' title='Repository' />
-                </a>
-                <a href={deploy} rel='noreferrer' target='_blank'>
-                    <S.CardImg src={Deploy} alt='Deploy' title='Deploy' />
-                </a>
+                {repository !== '#' && (
+                    <a href={repository} rel='noreferrer' target='_blank'>
+                        <S.CardImg src={Github} alt='Repository' title='Repository' />
+                    </a>
+                )}
+                {deploy !== '#' && (
+                    <a href={deploy} rel='noreferrer' target='_blank'>
+                        <S.CardImg src={Deploy} alt='Deploy' title='Deploy' />
+                    </a>
+                )}
             </S.DivIcons>
         </S.CardProject>
     );
