@@ -14,12 +14,12 @@ const SocialMedias = () => {
                 </a>
             </S.SocialMediasLi>
             <S.SocialMediasLi>
-                <a href="https://www.linkedin.com/in/thiago-alves-b05ab2b0">
+                <a href="https://www.linkedin.com/in/mthiagoalves/?locale=pt">
                     <S.SocialMediasImg src={linkedin} alt='Icon Linkedin' title='Linkedin' />
                 </a>
             </S.SocialMediasLi>
             <S.SocialMediasLi>
-                <a href="https://www.linkedin.com/in/thiago-alves-b05ab2b0">
+                <a href="https://www.instagram.com/thialvesmk">
                     <S.SocialMediasImg src={instagram} alt='Icon Instagram' title='Instagram' />
                 </a>
             </S.SocialMediasLi>

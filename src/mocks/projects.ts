@@ -1,5 +1,35 @@
 export const projects = [
     {
+        "title": "Advanced Team Website",
+        "slug": "advanced-team-website",
+        "smallDescription": "Website created to company: Advanced Team...",
+        "description": "Developing my portfolio using Laravel, VueJs, Tailwind, PHP, and TreeJs was a structured journey, starting from planning to implementation. I carefully defined the requirements, considering my target audience, desired content, and visual design. I set up the Laravel environment using Composer and installed Livewire to facilitate the development of dynamic components. I built the frontend using Bootstrap for a modern and responsive design, integrating it into my Blade files and configuring JavaScript as needed. I created routes and controllers to direct the flow of my application, opting for data modeling when necessary for dynamic information. I developed pages and components in Laravel, using Blade views and Livewire components for dynamic areas such as the display of projects. Integration with the backend (PHP) was achieved through controllers to retrieve data from the database, implementing PHP logic as needed.",
+        "technologies": "PHP, Laravel, VueJs, JavaScript",
+        "repository": "https://github.com/mthiagoalves",
+        "deploy": "https://advanced.team/",
+        "order": 1
+    },
+    {
+        "title": "Covet House Website",
+        "slug": "covet-house-website",
+        "smallDescription": "Website created to brand: Covet House...",
+        "description": "Developing my portfolio using Laravel, VueJs, Tailwind, PHP, and JavaScript was a structured journey, starting from planning to implementation. I carefully defined the requirements, considering my target audience, desired content, and visual design. I set up the Laravel environment using Composer and installed Livewire to facilitate the development of dynamic components. I built the frontend using Bootstrap for a modern and responsive design, integrating it into my Blade files and configuring JavaScript as needed. I created routes and controllers to direct the flow of my application, opting for data modeling when necessary for dynamic information. I developed pages and components in Laravel, using Blade views and Livewire components for dynamic areas such as the display of projects. Integration with the backend (PHP) was achieved through controllers to retrieve data from the database, implementing PHP logic as needed.",
+        "technologies": "PHP, Laravel, VueJs, JavaScript",
+        "repository": "https://github.com/mthiagoalves/covet-house-project",
+        "deploy": "https://covethouse.eu",
+        "order": 1
+    },
+    {
+        "title": "Magilore Website",
+        "slug": "magilore-website",
+        "smallDescription": "Website created to brand: Magilore...",
+        "description": "Developing my portfolio using Laravel, VueJs, Tailwind, PHP, and JavaScript was a structured journey, starting from planning to implementation. I carefully defined the requirements, considering my target audience, desired content, and visual design. I set up the Laravel environment using Composer and installed Livewire to facilitate the development of dynamic components. I built the frontend using Bootstrap for a modern and responsive design, integrating it into my Blade files and configuring JavaScript as needed. I created routes and controllers to direct the flow of my application, opting for data modeling when necessary for dynamic information. I developed pages and components in Laravel, using Blade views and Livewire components for dynamic areas such as the display of projects. Integration with the backend (PHP) was achieved through controllers to retrieve data from the database, implementing PHP logic as needed.",
+        "technologies": "PHP, Laravel, VueJs, JavaScript",
+        "repository": "https://github.com/mthiagoalves/",
+        "deploy": "https://magilore.kids",
+        "order": 1
+    },
+    {
         "title": "Portfolio Alexandre",
         "slug": "portfolio-alexandre",
         "smallDescription": "Portfolio maked to my friend Alexandre...",
@@ -10,13 +40,13 @@ export const projects = [
         "order": 1
     },
     {
-        "title": "Full Backoffice",
+        "title": "Site Circu",
         "slug": "backoffice",
         "smallDescription": "Project created for Circu of the Covet Group...",
         "description": "<b>1. Definition of Goals and Requirements:</b> I initiated the project by creating a clear list of goals and requirements for the back office. This included identifying essential functionalities such as product management, order processing, customer management, inventory tracking, and sales analytics. <b>2. Data Structure:</b> I developed a robust database schema to store all necessary information. I configured tables for products, customers, orders, order history, inventory, and more. I used the MySQL database management system to ensure efficiency and scalability. <b>3. Back-End Development:</b> I created the back-end logic for the system, choosing Laravel to develop the required APIs. This allowed seamless communication between the front-end and the back office. Functionalities included the ability to add, edit, and delete products, manage orders, track inventory, and more. <b>4. Security:</b> I implemented rigorous security measures to protect sensitive data from customers and the company. This involved user authentication, role-based authorization, and data encryption. <b>5. Front-End Development:</b> I developed the front-end using Laravel's Blade as requested by the company. I created an intuitive and user-friendly interface for the team to easily manage products, orders, and customers. I also included charts and reports for sales analysis. <b>6. Testing and Debugging:</b> I conducted extensive testing to ensure all functionalities worked seamlessly. Any bugs discovered were addressed before the launch. <b>7. Hosting and Deployment:</b> I selected a reliable hosting platform and deployed the back office. I ensured that all security settings were configured correctly. <b>8. Team Training:</b> I trained the team that would use the back office, ensuring they were well-prepared to effectively use all functionalities. <b>9. Maintenance and Continuous Improvement:</b> After the launch, I continued monitoring the system, fixing bugs, applying security updates, and implementing improvements based on team and user feedback. <i>The successful completion of this back-office creation project for the e-commerce website was crucial for the efficiency and success of the online business.</i>",
         "technologies": "PHP, JavaScript, Laravel, Bootstrap, Blade",
         "repository": "https://github.com/mthiagoalves/",
-        "deploy": "https://www.circu.net/dashboard/login",
+        "deploy": "https://www.circu.net/",
         "order": 2
     },
     {

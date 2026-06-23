@@ -16,9 +16,9 @@ const About = () => {
                     <S.TitleH2>Thiago Alves,</S.TitleH2>
                     <S.TitleH4> i'm Fullstack Web Developer</S.TitleH4>
                     <S.TextP>
-                        This is my new portfolio 2.0, maked in React with Typescript, and is consuming API maked in NestJs. Here i will to tell about my self, show my knowledges and project that i have developed until today during my journey.
+                        Full Stack Developer with 4+ years of experience in building scalable, high-performance web applications. I specialize in architecting robust back-end solutions with PHP (Laravel) and Node.js (Nest.js), and crafting dynamic, responsive user interfaces on the front-end with Vue.js.
                     </S.TextP>
-                    <S.BtnDownloadCV href='https://drive.google.com/file/d/11l6HAugcwO9X7YXn3z5OLrVGLB7OaQhr/view?usp=drive_link' target='_blank'>Download CV</S.BtnDownloadCV>
+                    <S.BtnDownloadCV href='https://drive.google.com/file/d/1N2cuGYmt7GaS1estMgnjiHkJwJbjG32j/view?usp=sharing' target='_blank'>Download my CV</S.BtnDownloadCV>
                 </S.ContentBx>
                 <S.DivImage className="col-5 p-0 d-none d-sm-block">
                     <S.Photothumb src={mybannerphoto} alt='image photothumb' />

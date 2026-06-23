@@ -8,14 +8,8 @@ export const technologies = [
     {
         "name": "PHP",
         "slug": "php",
-        "level": "Intermediate",
+        "level": "Advanced",
         "order": 2
-    },
-    {
-        "name": "TypeScript",
-        "slug": "typescript",
-        "level": "Beginner",
-        "order": 3
     },
     {
         "name": "Laravel",
@@ -24,69 +18,94 @@ export const technologies = [
         "order": 4
     },
     {
+        "name": "TypeScript",
+        "slug": "typescript",
+        "level": "Intermediate",
+        "order": 3
+    },
+    {
         "name": "NodeJs",
         "slug": "nodejs",
         "level": "Intermediate",
-         "order": 5
+        "order": 5
     },
     {
         "name": "NestJs",
         "slug": "nestjs",
         "level": "Intermediate",
-         "order": 6
-    },
-    {
-        "name": "ReactJs",
-        "slug": "reactjs",
-        "level": "Beginner",
-         "order": 7
+        "order": 6
     },
     {
         "name": "VueJs",
         "slug": "vuejs",
         "level": "Intermediate",
-         "order": 8
+        "order": 7
+    },
+    {
+        "name": "ReactJs",
+        "slug": "reactjs",
+        "level": "Beginner",
+        "order": 8
+    },
+    {
+        "name": "AWS",
+        "slug": "aws",
+        "level": "Intermediate",
+        "order": 9
+    },
+    {
+        "name": "Docker",
+        "slug": "docker",
+        "level": "Advanced",
+        "order": 10
+    },
+    {
+        "name": "Git",
+        "slug": "github",
+        "level": "Advanced",
+        "order": 11
     },
     {
         "name": "MySql",
         "slug": "mysql",
-        "level": "Intermediate",
-         "order": 9
+        "level": "Advanced",
+        "order": 12
     },
     {
         "name": "PostgresSql",
         "slug": "postgressql",
         "level": "Intermediate",
-         "order": 10
+        "order": 13
     },
     {
         "name": "Prisma",
         "slug": "prisma",
         "level": "Intermediate",
-         "order": 11
+        "order": 14
+    },
+    
+    {
+        "name": "Tailwind",
+        "slug": "tailwind",
+        "level": "Advanced",
+        "order": 15
     },
     {
         "name": "Bootstrap",
         "slug": "bootstrap",
-        "level": "Intermediate",
-         "order": 12
+        "level": "Advanced",
+        "order": 16
     },
     {
         "name": "HTML",
         "slug": "html",
-        "level": "Intermediate",
-         "order": 13
+        "level": "Advanced",
+        "order": 17
     },
     {
         "name": "CSS",
         "slug": "css",
-        "level": "Intermediate",
-         "order": 14
+        "level": "Advanced",
+        "order": 18
     },
-    {
-        "name": "Git",
-        "slug": "github",
-        "level": "Intermediate",
-         "order": 15
-    }
 ];

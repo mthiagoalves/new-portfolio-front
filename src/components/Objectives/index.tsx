@@ -19,14 +19,14 @@ const Objectives = () => {
                     </div>
                     <div className="col-sm-9 col-12 p-0">
                         <S.TextSection>
-                            It can be said that I am a very curious person. I like to do a lot of research to be able to solve certain things, and I try as much as possible to update myself and the projects I'm working on. I always try to keep time in my favor, I take the issue of quality very much into account and charge myself a lot about it, but always attentive to deadlines. I am currently working in Portugal at Covet Group where I am responsible for some of the group's websites. Where I do maintenance, implementation of new features, SQL, implementation of new projects. <br className='d-none d-sm-block' /> <b>And for last e dont less important, i love so much my son!</b>
+                            I am focused on delivering clean, maintainable code by applying industry best practices to ensure project quality. I am actively seeking an international opportunity to apply my skills and contribute to innovative projects. <br className='d-none d-sm-block' /> <b>And for last e dont less important, i love so much my son!</b>
                         </S.TextSection>
                         <S.LabelLanguages>
                             English:
                         </S.LabelLanguages>
                         <S.ProgressBar>
                             <S.ProgressBarInner>
-                                <S.ProgressBarInnerFilled  style={{ width: '35%' }}></S.ProgressBarInnerFilled>
+                                <S.ProgressBarInnerFilled  style={{ width: '75%' }}></S.ProgressBarInnerFilled>
                                 <S.ProgressBarInnerLabel>100%</S.ProgressBarInnerLabel>
                             </S.ProgressBarInner>
                         </S.ProgressBar>
